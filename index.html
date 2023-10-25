@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYT Puan Hesaplayıcı</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 1000px;">
+        <div class="card border border-dark" style="width: 28rem;">
+            <div class="card-header pt-3 col-12">
+                <div class="mb-1 d-flex justify-content-end">
+                    <div
+                        class=" py-1 rounded-start bg-success-subtle text-center col-2 border border-end-0 border-dark">
+                        Doğru</div>
+                    <div class=" py-1  text-center bg-danger-subtle col-2 border border-dark">Yanlış</div>
+                    <div class=" py-1 rounded-end  text-center col-2 border border-start-0 border-dark">Net</div>
+                </div>
+                <div class="input-group mb-2 rounded ">
+                    <span class="input-group-text col-6 border-dark">Türkçe (40 soru)</span>
+                    <input id="tDoğru" type="text" class="form-control  bg-success-subtle col-2 text-center border-dark"
+                        placeholder="-">
+                    <input id="tYanlış" type="text" class="form-control  bg-danger-subtle col-2 text-center border-dark"
+                        placeholder="-">
+                    <span id="tNet" class="input-group-text col-2  text-center border-dark"></span>
+                </div>
+                <div class="input-group mb-2 rounded ">
+                    <span class="input-group-text col-6 border-dark">Sosyal Bilimler (20 soru)</span>
+                    <input id="sDoğru" type="text" class="form-control  bg-success-subtle col-2 text-center border-dark"
+                        placeholder="-">
+                    <input id="sYanlış" type="text" class="form-control  bg-danger-subtle col-2 text-center border-dark"
+                        placeholder="-">
+                    <span id="sNet" class="input-group-text col-2  text-center border-dark"></span>
+                </div>
+                <div class="input-group mb-2 rounded ">
+                    <span class="input-group-text col-6 border-dark">Matematik (40 soru)</span>
+                    <input id="mDoğru" type="text" class="form-control  bg-success-subtle col-2 text-center border-dark"
+                        placeholder="-">
+                    <input id="mYanlış" type="text" class="form-control  bg-danger-subtle col-2 text-center border-dark"
+                        placeholder="-">
+                    <span id="mNet" class="input-group-text col-2  text-center border-dark"></span>
+                </div>
+                <div class="input-group mb-2 rounded ">
+                    <span class="input-group-text col-6 border-dark">Fen Bilimleri (20 soru)</span>
+
+                    <input id="fDoğru" type="text" class="form-control  bg-success-subtle col-2 text-center border-dark"
+                        placeholder="-">
+                    <input id="fYanlış" type="text" class="form-control  bg-danger-subtle col-2 text-center border-dark"
+                        placeholder="-">
+                    <span id="fNet" class="input-group-text col-2 text-center border-dark">-</span>
+                </div>
+                <hr>
+                <div class="input-group mb-3 rounded ">
+                    <span class="input-group-text col-6 border-dark">Diploma Notu (50-100)</span>
+
+                    <input id="dNot" type="text" class="form-control col-2 text-center border-dark" placeholder="-">
+                    <span class="input-group-text col-2  text-center border-dark">OBP : </span>
+                    <span id="obp" class="input-group-text col-2  text-center border-dark"></span>
+                </div>
+                <div id="tyt" class="border border-dark py-1 rounded  alert alert-success text-center col-12">a</div>
+                <div id="tytObp" class="border border-dark py-1 rounded  alert alert-success text-center col-12">a</div>
+            </div>
+            <div class="card-body">
+                <div id="body" class="d-flex justify-content-center">
+                    <button id="hesapla" type="button" class="btn btn-outline-success col-12 mt-2">Hesapla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
