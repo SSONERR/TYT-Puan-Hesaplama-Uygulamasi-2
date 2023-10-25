@@ -35,6 +35,7 @@ function run() {
 }
 
 function türkçe() {
+    //türkçe değerleri girildiğince çalışır
     if (Number(tD.value) + Number(tY.value) < 41) {
         tN.innerHTML = Number(tD.value) - (Number(tY.value) * 0.25)
         tN.classList.remove("bg-danger")
@@ -43,6 +44,7 @@ function türkçe() {
     }
 }
 function sosyal() {
+    //sosyal değerleri girildiğince çalışır
     if (Number(sD.value) + Number(sY.value) < 21) {
         sN.innerHTML = Number(sD.value) - (Number(sY.value) * 0.25)
         sN.classList.remove("bg-danger")
@@ -51,6 +53,7 @@ function sosyal() {
     }
 }
 function matematik() {
+    //matematik değerleri girildiğince çalışır
     if (Number(mD.value) + Number(mY.value) < 41) {
         mN.innerHTML = Number(mD.value) - (Number(mY.value) * 0.25)
         mN.classList.remove("bg-danger")
@@ -59,6 +62,7 @@ function matematik() {
     }
 }
 function fen() {
+    //fen değerleri girildiğince çalışır
     if (Number(fD.value) + Number(fY.value) < 21) {
         fN.innerHTML = Number(fD.value) - (Number(fY.value) * 0.25)
         fN.classList.remove("bg-danger")
@@ -67,6 +71,7 @@ function fen() {
     }
 }
 function diploma() {
+    //diploma notu değerleri girildiğince çalışır
     if (50 <= dN.value && dN.value <= 100) {
         obp.textContent = dN.value * 5
     } else {
@@ -74,9 +79,12 @@ function diploma() {
     }
 }
 function hesapla() {
+    //hesapla tuşuna basıldığında çalışır
+    //net hesaplamaları
     puan = mN.innerHTML * 3.3 + tN.innerHTML * 3.3 + sN.innerHTML * 3.4 + fN.innerHTML * 3.4 +100
     netler.push(tN.innerHTML, sN.innerHTML, mN.innerHTML, fN.innerHTML)
     if (puan >= 0) {
+        //standart sapma 
         let karesiToplanan = 0
         let sapmaToplam = (Number(mN.innerHTML) + Number(tN.innerHTML) + Number(sN.innerHTML) + Number(fN.innerHTML)) / 4
         netler.forEach(function (e) {
@@ -84,7 +92,6 @@ function hesapla() {
         })
         puan +=  Math.sqrt(karesiToplanan / 3)
         let sonuç = (Number(obp.textContent) * 0.12) + puan
-        // <div class="text-center col-12 border border-dark rounded"></div>
         tyt.classList = "border border-dark py-1 rounded  alert alert-success text-center col-12"
         tyt.textContent = "TYT Puanı: " + puan + " (Okul puanı hariç)"
         cardHeader.appendChild(tyt)
